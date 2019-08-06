@@ -81,10 +81,7 @@ client.on("message", (message) => {
 
 client.on('message', message => {
   if (message.content.startsWith("/chat "))
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-      if(command === "chat")
-      sayMessage = args.join(" ");
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
           
       message.delete().catch(O_o=>{});
       //L'envoi du message (ajoutez une ligne en changeant l'id pour ajouter un autre salon à cibler) 
