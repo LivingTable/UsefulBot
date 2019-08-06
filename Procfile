@@ -1,1 +1,1 @@
-worker: node usefulbotdiscord
+worker: node usefulbotdiscord.js
