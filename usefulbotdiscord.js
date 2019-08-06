@@ -91,6 +91,6 @@ client.on('message', message => {
       const args = message.content.slice(prefix.length).trim().split(/ +/g);
       client.channels.get(`608355997387456513`).send(sayMessage)
   
-  }); 
+  }; 
 
 client.login(process.env.BOT_TOKEN);//Héhé
