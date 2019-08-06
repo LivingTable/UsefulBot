@@ -77,7 +77,8 @@ client.on("message", (message) => {
   }
 });
 
-//Global Chat
+//Chat Global
+
 client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
@@ -87,10 +88,10 @@ client.on('message', message => {
       const sayMessage = args.join(" ");
           
       message.delete().catch(O_o=>{});
-      //L'envoi du message (ajoutez une ligne en changeant l'id pour ajouter un autre salon à cibler)
-      const args = message.content.slice(prefix.length).trim().split(/ +/g);
-      client.channels.get(`608355997387456513`).send(sayMessage)
-  
-  }; 
+      //Suppression
+      //Liste des salons ciblés
+      client.channels.get("608355997387456513").send(message.author.username + " a utilisé la commande /help")
+  }
+}); 
 
-client.login(process.env.BOT_TOKEN) //Héhé
+client.login(process.env.BOT_TOKEN); //Héhé
