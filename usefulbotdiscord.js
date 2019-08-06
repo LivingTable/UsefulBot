@@ -88,7 +88,6 @@ client.on('message', message => {
       message.delete().catch(O_o=>{});
       //L'envoi du message (ajoutez une ligne en changeant l'id pour ajouter un autre salon à cibler) 
       client.channels.get(`608355997387456513`).send(sayMessage)
-  })
-); 
+  }); 
 
 client.login(process.env.BOT_TOKEN);//Héhé
