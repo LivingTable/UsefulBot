@@ -64,7 +64,7 @@ client.on('ready', () => {
 console.log("Je suis connecté!")
   client.user.setUsername('UsefulBot')
   client.user.setStatus('dnd') 
-  client.user.setPresence({ game: { name: 'Being Useful | /help', type: 0 }});
+  client.user.setPresence({ game: { name: 'In Test | /help', type: 0 }});
 });
 
 //Useless things
@@ -76,4 +76,4 @@ client.on("message", (message) => {
   }
 });
 
-client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
+client.login(process.env.BOT_TOKEN);//Héhé
