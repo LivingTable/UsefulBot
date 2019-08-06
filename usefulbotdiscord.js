@@ -82,15 +82,12 @@ client.on("message", (message) => {
 client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-      if(command === "chat") {
-      // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
-      // To get the "message" itself we join the `args` back into a string with spaces: 
+      if(command === "chat")
       const sayMessage = args.join(" ");
           
       message.delete().catch(O_o=>{});
-      // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
-      // And we get the bot to say the thing: 
-      client.channels.get(`usefulchat`).send(sayMessage)
+      //L'envoi du message (ajoutez une ligne en changeant l'id pour ajouter un autre salon à cibler) 
+      client.channels.get(`608355997387456513`).send(sayMessage)
   }
 }); 
 
