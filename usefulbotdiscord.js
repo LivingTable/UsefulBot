@@ -80,7 +80,7 @@ client.on("message", (message) => {
 //Global Chat
 
 client.on("message", (message) => {
-  const args = message.content.slice(prefix.length).trim().split(/ +/g)); 
+  const args = message.content.slice(prefix.length).trim().split(/ +/g); 
       if (msg.channel.name === 'usefulchat')
        
       message.delete().catch(O_o=>{});
