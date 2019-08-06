@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var bossla = 0;
 var bossvie = 100
+const prefix = "/";
 
 var paper = [
   "<:rpsrock:495279201855864832>** Rock! Win! **<:rpsrock:495279201855864832>",
@@ -73,6 +74,23 @@ client.on("message", (message) => {
   let member = message.mentions.members.first()
   if (message.content.startsWith("/cookie " + member)) {
    message.channel.send("**" + member.user.username + " receive a cookie from " + message.author.username + "!** <:cookiebot:494913218259582979>");
+  }
+});
+
+//Global Chat
+
+client.on("message", (message) => {
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+    if (message.content.startsWith("")) 
+      if (msg.channel.name === 'usefulchat') {
+      const sayMessage = args.join(" ");
+      
+      message.delete().catch(O_o=>{});
+      // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
+      // And we get the bot to say the thing: 
+      message.channel.send(sayMessage);
+      
   }
 });
 
