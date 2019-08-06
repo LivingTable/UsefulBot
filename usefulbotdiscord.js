@@ -80,6 +80,7 @@ client.on("message", (message) => {
 //Global Chat
 
 client.on('message', message => {
+  if (message.content.startsWith("/chat "))
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
       if(command === "chat")
