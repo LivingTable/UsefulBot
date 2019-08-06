@@ -90,7 +90,7 @@ client.on('message', message => {
       message.delete().catch(O_o=>{});
       //Suppression
       //Liste des salons ciblés
-      client.channels.get("608355997387456513").send(message.author.username + " a utilisé la commande /help")
+      client.channels.get("608386006688989204").send(sayMessage);
   }
 }); 
 
