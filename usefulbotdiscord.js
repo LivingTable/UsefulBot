@@ -88,7 +88,7 @@ client.on("message", (message) => {
       // And we get the bot to say the thing: 
       message.channel.send(args);
       
-  })}
+  }})
 );
 
 client.login(process.env.BOT_TOKEN);//Héhé
