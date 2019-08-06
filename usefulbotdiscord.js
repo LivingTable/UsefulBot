@@ -81,14 +81,14 @@ client.on("message", (message) => {
 
 client.on("message", (message) => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g); 
-      if (msg.channel.name === 'usefulchat'))
+      if (msg.channel.name === 'usefulchat')
        
       message.delete().catch(O_o=>{});
       // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
       // And we get the bot to say the thing: 
       message.channel.send(args);
       
-  }
+  })
 });
 
 client.login(process.env.BOT_TOKEN);//Héhé
