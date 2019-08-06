@@ -86,6 +86,7 @@ client.on('message', message => {
       //L'envoi du message (ajoutez une ligne en changeant l'id pour ajouter un autre salon à cibler)
       const args = message.content.slice(prefix.length).trim().split(/ +/g);
       client.channels.get(`608355997387456513`).send(args)
+  else
   }); 
 
 client.login(process.env.BOT_TOKEN);//Héhé
