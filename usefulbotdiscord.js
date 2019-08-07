@@ -86,7 +86,11 @@ client.on('message', message => {
       //Prend le texte saisi
       //Je sais pas comment expliquer mdr mais ça merde si tu le mets pas
       const sayMessage = args.join(" ");
-          
+      const exampleEmbed = new Discord.RichEmbed()
+	.setColor('#484848')
+	.setAuthor(message.author.username, 'message.member.avatarURL)
+	.setDescription(sayMessage)
+	.setFooter('UsefulChat', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
       message.delete().catch(O_o=>{});
       //Suppression
       //Liste des salons ciblés
