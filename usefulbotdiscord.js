@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var bossla = 0;
 var bossvie = 100
-var num = message.content.whatever;
 const prefix = "/";
 
 var paper = [
@@ -129,6 +128,7 @@ client.on('message', message => {
 client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
+  const num = message.content.whatever;
       if(command === "poll") 
       if (!num) {message.channel.send("**Can't create the poll.**")};
       //Prend le texte saisi
