@@ -130,7 +130,7 @@ client.on('message', message => {
   const command = args.shift().toLowerCase();
   const usefulPoll = args.join(" ");
   if(command === "poll") 
-  const usefulEmbed = new Discord.RichEmbed()
+     const usefulEmbed = new Discord.RichEmbed()
 	.setColor('#484848')
 	.setAuthor('Sondage de ' + message.author.username, message.author.avatarURL)
         .setDescription(usefulPoll)
