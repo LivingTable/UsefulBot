@@ -83,8 +83,8 @@ client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
       if(command === "chat") {
-      // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
-      // To get the "message" itself we join the `args` back into a string with spaces: 
+      //Prend le texte saisi
+      //Je sais pas comment expliquer mdr mais ça merde si tu le mets pas
       const sayMessage = args.join(" ");
           
       message.delete().catch(O_o=>{});
