@@ -135,18 +135,24 @@ client.on('message', message => {
       const usefulEmbed = new Discord.RichEmbed()
 	.setColor('#484848')
 	.setAuthor('Sondage de ' + message.author.username , message.author.avatarURL)
-        .addBlankField()
-        .addBlankField()
 	.setDescription(sayMessage)
         .addBlankField()
 	.setFooter('UsefulPoll', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
       message.delete().catch(O_o=>{});
       //Suppression
       //Envoi et réactions
-      message.channel.send(usefulEmbed)
-      message.react('608484799505760272')
-      message.react('608484799216222218');
+      message.channel.send(usefulEmbed);
+	      
   }
 }); 
 
+client.on('message', message => {
+    if (message.author.id == 494892826044268544) {
+      if (message.content.includes('Sondage de ')) {
+      message.react('608484799505760272');
+      message.react('608484799216222218');
+});
+
+//    message.react('608484799505760272');
+//    message.react('608484799216222218');
 client.login(process.env.BOT_TOKEN); //Héhé
