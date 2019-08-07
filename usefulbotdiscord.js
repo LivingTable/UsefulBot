@@ -10,6 +10,14 @@ var paper = [
   "<:rpspaper:495279179806539776>** Paper! Tie. **<:rpspaper:495279179806539776>"
 ]
 
+var anime = [
+  "JoJo",
+  "JoJo",
+  "JoJo",
+  "JoJo",
+  "JoJo"
+]
+
 var scissors = [
   "<:rpsrock:495279201855864832>** Rock! Lose... **<:rpsrock:495279201855864832>",
   "<:rpsscissors:495279191294476288>** Scissors! Tie. **<:rpsscissors:495279191294476288>",
@@ -147,9 +155,13 @@ client.on('message', message => {
 	      
 }); 
 
+
+
 client.on("message", (message) => {
-  if (message.content("/poll ")) {
-      message.delete().catch(O_o=>{});
+  if (message.content.startsWith("/poll ")) {
+    if(!message.content.includes("a") || !message.content.includes("b") || !message.content.includes("c") || !message.content.includes("d") || !message.content.includes("e")) || !message.content.includes("f") || !message.content.includes("g") || !message.content.includes("h") || !message.content.includes("i") || !message.content.includes("j") || !message.content.includes("k") || !message.content.includes("l") || !message.content.includes("m") || !message.content.includes("n") || !message.content.includes("o") || !message.content.includes("p") || !message.content.includes("q") || !message.content.includes("r") || !message.content.includes("s") || !message.content.includes("t") || !message.content.includes("u") || !message.content.includes("v") || !message.content.includes("w") || !message.content.includes("x") || !message.content.includes("y") || !message.content.includes("z"){
+        message.delete();
+  }
   }
 });
 
