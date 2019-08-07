@@ -134,7 +134,7 @@ client.on('message', message => {
       const sayMessage = args.join(" ");
       const usefulEmbed = new Discord.RichEmbed()
 	.setColor('#484848')
-	.setAuthor('Sondage de ' + message.author.username , message.author.avatarURL)
+	.setAuthor('Sondage de ' + message.author.username, message.author.avatarURL)
         .addBlankField()
         .addField(sayMessage, 'Répondez avec <:usefulyes:608484799505760272> ou <:usefulno:608484799216222218>!')
         .addBlankField()
