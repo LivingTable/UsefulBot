@@ -141,16 +141,13 @@ client.on('message', message => {
       message.delete().catch(O_o=>{});
       //Suppression
       //Envoi et réactions
-      message.channel.send(usefulEmbed);
+      channel.send(usefulEmbed).then(sentEmbed => {
+              sentEmbed.react("👍")
+              sentEmbed.react("👎")
+      })
 	      
   }
 }); 
-
-client.on('message', message => {
-  if (message.content.includes('UsefulPoll') {
-      message.react('608484799505760272');
-  }
-});
 
 
 //    message.react('608484799505760272');
