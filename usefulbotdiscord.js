@@ -98,4 +98,31 @@ client.on('message', message => {
   }
 }); 
 
+//Commandes Modération
+
+client.on('message', message => {
+  if (!message.guild) return;
+    if (message.author.id == 376387562161438730) {
+      if (message.content.startsWith('/ban)) {
+        const user = message.mentions.users.first();
+        if (user) {
+          const member = message.guild.member(user);
+          if (member) {
+            member.ban({
+              reason: `Banned using UsefulBot's banning command.`,
+            }).then(() => {
+              message.reply(`**${user.tag} is banned using UsefulBot's banning command.**`);
+            }).catch(err => {
+              message.reply(`**Can't ban this guy.**`);
+            });
+          } else {
+            message.reply('**What?**');
+          }
+          } else {
+            message.reply('**Who do you want to ban?**');
+      }
+    }
+  }      
+});
+
 client.login(process.env.BOT_TOKEN); //Héhé
