@@ -128,9 +128,7 @@ client.on('message', message => {
 client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  const num = message.content.whatever;
       if(command === "poll") 
-      if (!num) {message.channel.send("**Can't create the poll.**")};
       //Prend le texte saisi
       //Je sais pas comment expliquer mdr mais ça merde si tu le mets pas
       const sayMessage = args.join(" ");
@@ -147,7 +145,8 @@ client.on('message', message => {
       //Envoi et réactions
       message.channel.send(usefulEmbed).then(sentEmbed => {
                       sentEmbed.react("608484799505760272")
-                      sentEmbed.react("608484799216222218")});
+                      sentEmbed.react("608484799216222218")
+      });
 	      
 }); 
 
