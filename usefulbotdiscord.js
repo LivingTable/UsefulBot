@@ -132,9 +132,8 @@ client.on('message', message => {
   const usefulEmbed = new Discord.RichEmbed()
 	.setColor('#484848')
 	.setAuthor('Sondage de ' + message.author.username, message.author.avatarURL)
-        .setDescription(usefulPoll)
         .addBlankField()
-        .addField('--------------', 'Répondez avec <:usefulyes:608484799505760272> ou <:usefulno:608484799216222218>!')
+        .addField(usefulPoll, 'Répondez avec <:usefulyes:608484799505760272> ou <:usefulno:608484799216222218>!')
         .addBlankField()
         .addBlankField()
 	.setFooter('UsefulPoll', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
@@ -150,7 +149,7 @@ client.on('message', message => {
 
 client.on("message", (message) => {
   if (message.content("/poll ")) {
-      message.delete()
+      message.delete().catch(O_o=>{};
   }
 });
 
