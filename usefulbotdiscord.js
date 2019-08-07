@@ -147,9 +147,9 @@ client.on('message', message => {
 }); 
 
 client.on('message', message => {
-  if (message.content.includes('UsefulPoll')
+  if (message.content.includes('UsefulPoll') {
       message.react('608484799505760272');
-      message.react('608484799216222218');
+  }
 });
 
 
