@@ -141,9 +141,9 @@ client.on('message', message => {
       message.delete().catch(O_o=>{});
       //Suppression
       //Envoi et réactions
-      channel.send(usefulEmbed).then(sentEmbed => {
-              sentEmbed.react("👍")
-              sentEmbed.react("👎")
+      message.channel.send(usefulEmbed).then(sentEmbed => {
+                      sentEmbed.react("👍")
+                      sentEmbed.react("👎")
       })
 	      
   }
