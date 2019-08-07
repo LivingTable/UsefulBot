@@ -148,6 +148,11 @@ client.on('message', message => {
 	      
 }); 
 
+client.on("message", (message) => {
+  if (message.content("/poll ")) {
+      message.delete()
+  }
+});
 
 //    message.react('608484799505760272');
 //    message.react('608484799216222218');
