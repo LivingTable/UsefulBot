@@ -130,7 +130,7 @@ client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
       if(command === "poll") 
-	      if (!num) {message.channel.send("**Can't create the poll.**")};
+      if (!num) {message.channel.send("**Can't create the poll.**")};
       //Prend le texte saisi
       //Je sais pas comment expliquer mdr mais ça merde si tu le mets pas
       const sayMessage = args.join(" ");
