@@ -148,10 +148,11 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.author.id == 494892826044268544) {
-      if (message.content.includes('Sondage de ')) {
-      message.react('608484799505760272');
-      message.react('608484799216222218');
-};
+      if (message.content.includes('Sondage de ') {
+          message.react('608484799505760272');
+          message.react('608484799216222218');
+      }
+});
 
 //    message.react('608484799505760272');
 //    message.react('608484799216222218');
