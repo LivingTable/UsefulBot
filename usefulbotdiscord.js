@@ -147,10 +147,8 @@ client.on('message', message => {
       //Envoi et réactions
       message.channel.send(usefulEmbed).then(sentEmbed => {
                       sentEmbed.react("608484799505760272")
-                      sentEmbed.react("608484799216222218")
-      })
+                      sentEmbed.react("608484799216222218")});
 	      
-  })
 }); 
 
 
