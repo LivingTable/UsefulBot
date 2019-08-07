@@ -86,7 +86,7 @@ client.on('message', message => {
       //Prend le texte saisi
       //Je sais pas comment expliquer mdr mais ça merde si tu le mets pas
       const sayMessage = args.join(" ");
-      const exampleEmbed = new Discord.RichEmbed()
+      const usefulEmbed = new Discord.RichEmbed()
 	.setColor('#484848')
 	.setAuthor(message.author.username, message.member.avatarURL)
 	.setDescription(sayMessage)
@@ -94,7 +94,7 @@ client.on('message', message => {
       message.delete().catch(O_o=>{});
       //Suppression
       //Liste des salons ciblés
-      client.channels.get("608386006688989204").send(sayMessage);
+      client.channels.get("608386006688989204").send(usefulEmbed);
   }
 }); 
 
