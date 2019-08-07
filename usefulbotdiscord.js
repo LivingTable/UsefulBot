@@ -132,7 +132,6 @@ client.on('message', message => {
       //Prend le texte saisi
       //Je sais pas comment expliquer mdr mais ça merde si tu le mets pas
       const sayMessage = args.join(" ");
-      const emoji = message.guild.emojis.first();
       const usefulEmbed = new Discord.RichEmbed()
 	.setColor('#484848')
 	.setAuthor('Sondage de ' + message.author.username , message.author.avatarURL)
@@ -145,8 +144,8 @@ client.on('message', message => {
       //Suppression
       //Envoi et réactions
       message.channel.send(usefulEmbed);
-      message.react(emoji.name.usefulyes)
-      message.react(emoji.name.usefulno)
+      message.react('608484799505760272');
+      message.react('608484799216222218');
   }
 }); 
 
