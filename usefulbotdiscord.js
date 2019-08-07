@@ -103,7 +103,7 @@ client.on('message', message => {
 client.on('message', message => {
   if (!message.guild) return;
     if (message.author.id == 376387562161438730) {
-      if (message.content.startsWith('/ban)) {
+      if (message.content.startsWith('/ban ')) {
         const user = message.mentions.users.first();
         if (user) {
           const member = message.guild.member(user);
