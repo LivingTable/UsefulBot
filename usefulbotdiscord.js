@@ -88,7 +88,7 @@ client.on('message', message => {
       const sayMessage = args.join(" ");
       const exampleEmbed = new Discord.RichEmbed()
 	.setColor('#484848')
-	.setAuthor(message.author.username, 'message.member.avatarURL)
+	.setAuthor(message.author.username, message.member.avatarURL)
 	.setDescription(sayMessage)
 	.setFooter('UsefulChat', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
       message.delete().catch(O_o=>{});
