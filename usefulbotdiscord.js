@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var bossla = 0;
 var bossvie = 100
+var num = message.content.whatever;
 const prefix = "/";
 
 var paper = [
@@ -128,7 +129,8 @@ client.on('message', message => {
 client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-      if(command === "poll") {
+      if(command === "poll") 
+	      if (!num) {message.channel.send("**Can't create the poll.**")};
       //Prend le texte saisi
       //Je sais pas comment expliquer mdr mais ça merde si tu le mets pas
       const sayMessage = args.join(" ");
@@ -136,8 +138,7 @@ client.on('message', message => {
 	.setColor('#484848')
 	.setAuthor('Sondage de ' + message.author.username , message.author.avatarURL)
         .addBlankField()
-        .addField(' ', '**' + sayMessage + '**')
-        .addField(' ', 'Répondez avec <:usefulyes:608484799505760272> ou <:usefulno:608484799216222218>!')
+        .addField(sayMessage, 'Répondez avec <:usefulyes:608484799505760272> ou <:usefulno:608484799216222218>!')
         .addBlankField()
         .addBlankField()
 	.setFooter('UsefulPoll', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
