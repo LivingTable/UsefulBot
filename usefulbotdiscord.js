@@ -128,10 +128,10 @@ client.on('message', message => {
 client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
+  const usefulPoll = args.join(" ");
       if(command === "poll") 
       //Prend le texte saisi
       //Je sais pas comment expliquer mdr mais ça merde si tu le mets pas
-      const usefulPoll = args.join(" ");
       const usefulEmbed = new Discord.RichEmbed()
 	.setColor('#484848')
 	.setAuthor('Sondage de ' + message.author.username, message.author.avatarURL)
