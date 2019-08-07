@@ -150,7 +150,7 @@ client.on('message', message => {
                       sentEmbed.react("608484799216222218")
       })
 	      
-  }
+  })
 }); 
 
 
