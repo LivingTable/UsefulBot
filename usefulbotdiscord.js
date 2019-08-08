@@ -64,7 +64,7 @@ client.channels.get("494896830300291072").send("Le bot a rejoint " + guild.name 
 
 client.on("message", (message) => {
   if (message.content.startsWith("/help")) {
-    message.channel.send("```fix\n/cookie + mention: Give a cookie!\n/rps (rock, paper, scissors): Play rps!\n/boss and /attack: Fight the boss!```");
+    message.channel.send("**Help command is currently in work.**");
     client.channels.get("494896830300291072").send(message.author.username + " a utilisé la commande /help")
   }
 });
@@ -138,7 +138,7 @@ client.on('message', message => {
   const command = args.shift().toLowerCase();
   const usefulPoll = args.join(" ");
   const usefulEmbed = new Discord.RichEmbed()
-	.setColor('#484848')
+ 	.setColor('#484848')
 	.setAuthor('Sondage de ' + message.author.username, message.author.avatarURL)
         .addBlankField()
         .addField(usefulPoll, 'Répondez avec <:usefulyes:608484799505760272> ou <:usefulno:608484799216222218>!')
@@ -155,15 +155,6 @@ client.on('message', message => {
 	      
 }); 
 
-
-
-client.on("message", (message) => {
-  if (message.content.startsWith("/poll ")) {
-    if(!message.content.includes("")){
-        message.delete();
-  }
-  }
-});
 
 //    message.react('608484799505760272');
 //    message.react('608484799216222218');
