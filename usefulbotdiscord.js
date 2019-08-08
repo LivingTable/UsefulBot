@@ -136,18 +136,18 @@ client.on('message', message => {
 client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g); 
   const command = args.shift().toLowerCase();
+  if(command === "poll") 
   const usefulPoll = args.join(" ");
   const usefulEmbed = new Discord.RichEmbed()
  	.setColor('#484848')
 	.setAuthor('Sondage de ' + message.author.username, message.author.avatarURL)
-         .setDescription(usefulPoll)
+        .setDescription(usefulPoll)
         .addBlankField()
         .addField('------------', 'Répondez avec <:usefulyes:608484799505760272> ou <:usefulno:608484799216222218>!')
         .addBlankField()
         .addBlankField()
 	.setFooter('UsefulPoll', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
       //Prend le texte saisi
-  if(command === "poll") 
      message.delete().catch(O_o=>{});
      message.channel.send(usefulEmbed).then(sentEmbed => {
                       sentEmbed.react("608484799505760272")
