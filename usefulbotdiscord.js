@@ -134,7 +134,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const args = message.content.slice(prefix.length).trim().split(/+/g); //Ajouter un espace au dernier truc si ça marche pas
   const command = args.shift().toLowerCase();
   const usefulPoll = args.join(" ");
   const usefulEmbed = new Discord.RichEmbed()
@@ -159,7 +159,7 @@ client.on('message', message => {
 
 client.on("message", (message) => {
   if (message.content.startsWith("/poll ")) {
-    if(!message.content.includes("a") || !message.content.includes("b") || !message.content.includes("c") || !message.content.includes("d") || !message.content.includes("e")) || !message.content.includes("f") || !message.content.includes("g") || !message.content.includes("h") || !message.content.includes("i") || !message.content.includes("j") || !message.content.includes("k") || !message.content.includes("l") || !message.content.includes("m") || !message.content.includes("n") || !message.content.includes("o") || !message.content.includes("p") || !message.content.includes("q") || !message.content.includes("r") || !message.content.includes("s") || !message.content.includes("t") || !message.content.includes("u") || !message.content.includes("v") || !message.content.includes("w") || !message.content.includes("x") || !message.content.includes("y") || !message.content.includes("z"){
+    if(!message.content.includes("")){
         message.delete();
   }
   }
