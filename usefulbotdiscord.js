@@ -137,8 +137,7 @@ client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g); 
   const command = args.shift().toLowerCase();     
   const sayMessage = args.join(" ");
-  if(command === "poll") 
-        const usefulEmbed = new Discord.RichEmbed()
+  const usefulEmbed = new Discord.RichEmbed()
  	   .setColor('#484848')
 	   .setAuthor('Sondage de ' + message.author.username, message.author.avatarURL)
            .setDescription(sayMessage)
@@ -146,6 +145,8 @@ client.on('message', message => {
            .addBlankField()
            .addBlankField()
 	   .setFooter('UsefulPoll', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
+  if(command === "poll") 
+
       //Prend le texte saisi
      message.delete().catch(O_o=>{});
      message.channel.send(usefulEmbed).then(sentEmbed => {
