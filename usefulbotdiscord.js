@@ -134,7 +134,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  const args = message.content.slice(prefix.length).trim().split(/+/g); //Ajouter un espace au dernier truc si ça marche pas
+  const args = message.content.slice(prefix.length).trim().split(/ +/g); 
   const command = args.shift().toLowerCase();
   const usefulPoll = args.join(" ");
   const usefulEmbed = new Discord.RichEmbed()
