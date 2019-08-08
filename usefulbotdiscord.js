@@ -146,13 +146,14 @@ client.on('message', message => {
            .addBlankField()
 	   .setFooter('UsefulPoll', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
   if(command === "poll") 
-
-      //Prend le texte saisi
      message.delete().catch(O_o=>{});
      message.channel.send(usefulEmbed).then(sentEmbed => {
-                      sentEmbed.react("608484799505760272")
-                      sentEmbed.react("608484799216222218")
+     sentEmbed.react("608484799505760272")
+     sentEmbed.react("608484799216222218")
       });
+  else {
+	  message.reply('**What?**');
+  }
 	      
 }); 
 
