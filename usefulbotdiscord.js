@@ -150,7 +150,8 @@ client.on('message', message => {
      message.channel.send(usefulEmbed).then(sentEmbed => {
      sentEmbed.react("608484799505760272")
      sentEmbed.react("608484799216222218")
-     })     
+     }) 
+  }
 }); 
 
 client.on("serverNewMember", (server, user) => {
