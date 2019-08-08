@@ -135,13 +135,13 @@ client.on('message', message => {
 
 client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g); 
-  const command = args.shift().toLowerCase();
+  const command = args.shift().toLowerCase();     
+  const sayMessage = args.join(" ");
   if(command === "poll") 
-     const usefulPoll = args.join(" ");
         const usefulEmbed = new Discord.RichEmbed()
  	   .setColor('#484848')
 	   .setAuthor('Sondage de ' + message.author.username, message.author.avatarURL)
-           .setDescription(usefulPoll)
+           .setDescription(sayMessage)
            .addField('------------', 'Répondez avec <:usefulyes:608484799505760272> ou <:usefulno:608484799216222218>!')
            .addBlankField()
            .addBlankField()
