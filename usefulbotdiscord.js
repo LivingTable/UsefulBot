@@ -102,8 +102,7 @@ client.on('message', message => {
       message.delete().catch(O_o=>{});
       //Suppression
       //Liste des salons ciblés
-      const channel = client.channels.find('usefulchat', channelName)
-      channelName.send(usefulEmbed);
+      const channel = client.channels.find('name', 'usefulchat').send(usefulEmbed);
   }
 }); 
 
