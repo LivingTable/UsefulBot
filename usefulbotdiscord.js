@@ -103,7 +103,7 @@ client.on('message', message => {
       //Suppression
       //Liste des salons ciblés
       const channel = client.channels.find('usefulchat', channelName)
-      channel.send(usefulEmbed);
+      channelName.send(usefulEmbed);
   }
 }); 
 
