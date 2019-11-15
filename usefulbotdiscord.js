@@ -92,7 +92,7 @@ console.log("Je suis connecté!")
 
 client.on("message", (message) => {
   const ID = message.author.id;
-  if (message.content.startsWith("/balance")) {
+  if (message.content("/balance")) {
    message.channel.send("**You have: " + money[ID] + " UsefulCoins!**");
   }
 });
