@@ -116,12 +116,7 @@ client.on("message", (message) => {
 
 //Useless things
 
-client.on("message", (message) => {
-  let member = message.mentions.members()
-  if (message.content.startsWith("/cookie " + member)) {
-   message.channel.send("**" + member.user.username + " receive a cookie from " + message.author.username + "!** <:cookiebot:494913218259582979>");
-  }
-});
+
 
 //Chat Global
 
