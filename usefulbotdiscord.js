@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const money = require('./money.json');
 const client = new Discord.Client();
 var bossla = 0;
 var bossvie = 100
@@ -77,6 +78,16 @@ console.log("Je suis connecté!")
 });
 
 //Useless things
+
+ // or set it as the mentioned user's ID, etc.
+;
+
+client.on("message", (message) => {
+  const ID = message.author.id;
+  if (message.content.startsWith("/balance")) {
+   message.channel.send("**You have: " + money[ID] + " UsefulCoins!**");
+  }
+});
 
 client.on("message", (message) => {
   let member = message.mentions.members.first()
