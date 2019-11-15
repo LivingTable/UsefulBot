@@ -74,13 +74,6 @@ client.on("guildCreate", guild => {
 client.channels.get("494896830300291072").send("Le bot a rejoint " + guild.name + ", geré par " + guild.owner.user.username)
 });
 
-client.on("message", (message) => {
-  if (message.content.startsWith("/help")) {
-    message.channel.send("**Help command is currently in work.**");
-    client.channels.get("494896830300291072").send(message.author.username + " a utilisé la commande /help")
-  }
-});
-
 client.on('ready', () => {
 console.log("Je suis connecté!")
   client.user.setUsername('UsefulBot')
@@ -92,14 +85,14 @@ console.log("Je suis connecté!")
 
 client.on("message", (message) => {
   const ID = message.author.id;
-  if (message.content("/balance")) {
+  if (message.content.startsWith("/balance")) {
    message.channel.send("**You have: " + money[ID] + " UsefulCoins!**");
   }
 });
 
 client.on("message", (message) => {
   const ID = message.author.id;
-  if (message.content.startsWith("/balance create")) {
+  if (message.content.startsWith("/create")) {
    money[ID] = 0;
    fs.writeFileSync('./money.json', JSON.stringify(money));
    message.channel.send("**Created money account!**");
@@ -117,7 +110,27 @@ client.on("message", (message) => {
 
 //Useless things
 
-
+client.on('message', message => {
+  if (message.content.startsWith("/help")) {
+  const args = message.content.slice(prefix.length).trim().split(/ +/g); 
+  const command = args.shift().toLowerCase();     
+  const sayMessage = args.join(" ");
+  const usefulEmbed = new Discord.RichEmbed()
+ 	   .setColor('#484848')
+	   .setAuthor('Help')
+           .setDescription('Need help?')
+           .addField('**Basic commands**')
+           .addField('**/chat + [message]**: Sends a message to the UsefulChat, a global chat.')
+           .addBlankField()
+           .addField('**Money commands**')
+           .addField('**/create**: Creates your own money account.')
+           .addField('**/balance**: Checks your money account (use /create before using it for the first time).')
+           .addBlankField()
+	   .setFooter('UsefulBot', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
+     message.delete().catch(O_o=>{});
+     message.channel.send(usefulEmbed)
+  }
+}); 
 
 //Chat Global
 
