@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const fs = require('fs');
 const money = require('./money.json');
 const client = new Discord.Client();
 var bossla = 0;
