@@ -74,7 +74,7 @@ client.on('ready', () => {
 console.log("Je suis connecté!")
   client.user.setUsername('UsefulBot')
   client.user.setStatus('dnd') 
-  client.user.setPresence({ game: { name: 'Making the Help command | /help', type: 0 }});
+  client.user.setPresence({ game: { name: 'Making the Help command | /help', type: 4 }});
 });
 
 //Useless things
