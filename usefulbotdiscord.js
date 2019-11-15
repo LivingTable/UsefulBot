@@ -82,10 +82,25 @@ console.log("Je suis connecté!")
 client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/balance")) {
-   if money[ID] = 
-   money[ID] = 3;
-   fs.writeFileSync('./money.json', JSON.stringify(money));
    message.channel.send("**You have: " + money[ID] + " UsefulCoins!**");
+  }
+});
+
+client.on("message", (message) => {
+  const ID = message.author.id;
+  if (message.content.startsWith("/balance create")) {
+   money[ID] = 0;
+   fs.writeFileSync('./money.json', JSON.stringify(money));
+   message.channel.send("**Created money account!**");
+  }
+});
+
+client.on("message", (message) => {
+  const ID = message.author.id;
+  if (message.content.startsWith("/give")) {
+  money[ID] += 50;
+  fs.writeFileSync('./money.json', JSON.stringify(money));
+  message.channel.send("**Added 50 UsefulCoins to your account!**");
   }
 });
 
