@@ -74,20 +74,22 @@ client.on('ready', () => {
 console.log("Je suis connecté!")
   client.user.setUsername('UsefulBot')
   client.user.setStatus('dnd') 
-  client.user.setPresence({ game: { name: 'Making the Help command | /help', type: 4 }});
+  client.user.setPresence({ game: { name: 'Making the Help command | /help', type: 0 }});
 });
 
-//Useless things
-
- // or set it as the mentioned user's ID, etc.
-;
+//Money system
 
 client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/balance")) {
+   if money[ID] = 
+   money[ID] = 3;
+   fs.writeFileSync('./money.json', JSON.stringify(money));
    message.channel.send("**You have: " + money[ID] + " UsefulCoins!**");
   }
 });
+
+//Useless things
 
 client.on("message", (message) => {
   let member = message.mentions.members.first()
