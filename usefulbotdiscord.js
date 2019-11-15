@@ -78,7 +78,7 @@ client.on('ready', () => {
 console.log("Je suis connecté!")
   client.user.setUsername('UsefulBot')
   client.user.setStatus('dnd') 
-  client.user.setPresence({ game: { name: 'Making the Help command | /help', type: 0 }});
+  client.user.setPresence({ game: { name: 'Experimenting | /help', type: 0 }});
 });
 
 //Money system
@@ -94,7 +94,7 @@ client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/create")) {
    money[ID] = 0;
-   fs.writeFileSync('./money.json', JSON.stringify(money));
+   fs.writeFileSync('./money.json', JSON.stringify(money[ID]));
    message.channel.send("**Created money account!**");
   }
 });
@@ -103,7 +103,7 @@ client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/give")) {
   money[ID] += 50;
-  fs.writeFileSync('./money.json', JSON.stringify(money));
+  fs.writeFileSync('./money.json', JSON.stringify(money[ID]));
   message.channel.send("**Added 50 UsefulCoins to your account!**");
   }
 });
