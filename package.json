@@ -14,9 +14,6 @@
     "fs": "0.0.1-security",
     "github": "^14.0.0",
     "npm": "^6.2.0",
-    "node": "12.13.0",
-    "opusscript": "0.0.6",
-    "youtube-dl": "^1.12.2",
-    "ytdl-core": "^0.20.4"
+    "node": "10.16.2"
   }
 }
