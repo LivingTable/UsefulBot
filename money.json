@@ -1,1 +1,23 @@
+{
+  "name": "config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "usefulbotdiscord.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "ffmpeg-binaries": "^4.0.0",
+    "fs": "0.0.1-security",
+    "github": "^14.0.0",
+    "npm": "^6.2.0",
+    "opusscript": "0.0.6",
+    "youtube-dl": "^1.12.2",
+    "ytdl-core": "^0.20.4"
+  }
+}
+
 { "userIDhere": 0 }
