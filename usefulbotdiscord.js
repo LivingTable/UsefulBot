@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const client = new Discord.Client();
 var bossla = 0;
+var eco = require('discord-economy')
 var bossvie = 1000;
 const prefix = "/";
 const EventEmitter = require('events');
