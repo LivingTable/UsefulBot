@@ -76,6 +76,12 @@ client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/balance")) {
   const money = require('./money.json');
+	  if (money[ID] == null)  {
+  money[ID] = 0;
+  fs.writeFileSync('./money.json', JSON.stringify(money));
+  message.channel.send("**Created money account!**");
+  }
+	  else {
   message.channel.send("**You have: " + money[ID] + " UsefulCoins! <:UsefulCoin:645230163084181505>**");
   }
 });
@@ -84,9 +90,7 @@ client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/create")) {
   const money = require('./money.json');
-  money[ID] = 0;
-  fs.writeFileSync('./money.json', JSON.stringify(money));
-  message.channel.send("**Created money account!**");
+
   }
 });
 
