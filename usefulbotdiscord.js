@@ -76,7 +76,7 @@ client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/balance")) {
   const money = require('./money.json');
-	  if (money[ID]) == null  {
+	  if (money[ID] == null)  {
   money[ID] = 0;
   fs.writeFileSync('./money.json', JSON.stringify(money));
   message.channel.send("**Created money account!**");
