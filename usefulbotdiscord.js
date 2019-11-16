@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const client = new Discord.Client();
-const ytdl = require('ytdl-core');
 var bossla = 0;
 var bossvie = 1000;
 const prefix = "/";
