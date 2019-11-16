@@ -94,7 +94,7 @@ client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/create")) {
    money[ID] = 0;
-   fs.writeFileSync('./money.json', JSON.stringify(money[ID],{encoding:'utf8',flag:'w'}));
+   fs.writeFileSync('./money.json', JSON.stringify([new String([ID]), new Number(money))]));
    message.channel.send("**Created money account!**");
   }
 });
