@@ -78,6 +78,7 @@ client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/balance")) {
   message.channel.send("**You have: " + money[ID] + " UsefulCoins! <:UsefulCoin:645230163084181505>**");
+  }
 });
 
 client.on("message", (message) => {
