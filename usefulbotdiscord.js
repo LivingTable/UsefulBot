@@ -99,8 +99,6 @@ client.on("message", (message) => {
 client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/give")) {
-  money[ID] += 50;
-  fs.writeFileSync('./money.json', JSON.stringify(money[ID],{encoding:'utf8',flag:'w'}));
   message.channel.send("**Added 50 UsefulCoins to your account!**");
   }
 });
