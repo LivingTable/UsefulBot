@@ -80,11 +80,11 @@ client.on("message", (message) => {
   money[ID] = 0;
   fs.writeFileSync('./money.json', JSON.stringify(money));
   message.channel.send("**Created money account!**");
-  }
+	  }
 	  else {
   message.channel.send("**You have: " + money[ID] + " UsefulCoins! <:UsefulCoin:645230163084181505>**");
-  }
-};
+	  }
+});
 
 client.on("message", (message) => {
   const ID = message.author.id;
