@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const client = new Discord.Client();
+const ytdl = require('ytdl-core');
 var bossla = 0;
 var bossvie = 1000;
 const prefix = "/";
@@ -76,21 +77,16 @@ console.log("Je suis connecté!")
 client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/balance")) {
-	  if money[ID] == null  {
-  money[ID] = 0;
-  fs.writeFileSync('./money.json', JSON.stringify(money));
-  message.channel.send("**Created money account!**");
-	  }
-	  else {
   message.channel.send("**You have: " + money[ID] + " UsefulCoins! <:UsefulCoin:645230163084181505>**");
-	  })
-};
+});
 
 client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/create")) {
   const money = require('./money.json');
-
+  money[ID] = 0;
+  fs.writeFileSync('./money.json', JSON.stringify(money));
+  message.channel.send("**Created money account!**");
   }
 });
 
