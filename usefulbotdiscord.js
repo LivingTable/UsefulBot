@@ -2,10 +2,8 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const money = require('./money.json');
 const client = new Discord.Client();
-const SQLite = require("better-sqlite3");
-const sql = new SQLite('./scores.sqlite');
 var bossla = 0;
-var bossvie = 100;
+var bossvie = 1000;
 const prefix = "/";
 const EventEmitter = require('events');
 
@@ -96,7 +94,7 @@ client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/create")) {
    money[ID] = 0;
-   fs.writeFileSync('./money.json', JSON.stringify(money[ID]));
+   fs.writeFileSync('./money.json', JSON.stringify(money[ID],{encoding:'utf8',flag:'w'}));
    message.channel.send("**Created money account!**");
   }
 });
@@ -105,7 +103,7 @@ client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/give")) {
   money[ID] += 50;
-  fs.writeFileSync('./money.json', JSON.stringify(money[ID]));
+  fs.writeFileSync('./money.json', JSON.stringify(money[ID],{encoding:'utf8',flag:'w'}));
   message.channel.send("**Added 50 UsefulCoins to your account!**");
   }
 });
