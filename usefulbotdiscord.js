@@ -4,6 +4,7 @@ const client = new Discord.Client();
 var bossla = 0;
 var bossvie = 1000;
 const prefix = "/";
+const money = require('./money.json');
 
 var paper = [
   "<:rpsrock:495279201855864832>** Rock! Win! **<:rpsrock:495279201855864832>",
@@ -75,7 +76,6 @@ console.log("Je suis connecté!")
 client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/balance")) {
-  const money = require('./money.json');
 	  if money[ID] == null  {
   money[ID] = 0;
   fs.writeFileSync('./money.json', JSON.stringify(money));
