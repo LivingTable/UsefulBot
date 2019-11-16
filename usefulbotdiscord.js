@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const fs = require('fs');
-const money = require('./money.json');
 const client = new Discord.Client();
 var bossla = 0;
 var bossvie = 1000;
@@ -86,15 +85,13 @@ console.log("Je suis connecté!")
 client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/balance")) {
-   message.channel.send("**You have: " + money[ID] + " UsefulCoins!**");
+   message.channel.send("**You have: " + " UsefulCoins!**");
   }
 });
 
 client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/create")) {
-   money[ID] = 0;
-   fs.writeFileSync('./money.json', JSON.stringify());
    message.channel.send("**Created money account!**");
   }
 });
