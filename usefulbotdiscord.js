@@ -4,16 +4,6 @@ const client = new Discord.Client();
 var bossla = 0;
 var bossvie = 1000;
 const prefix = "/";
-const EventEmitter = require('events');
-
-class MyEmitter extends EventEmitter {}
-
-const myEmitter = new MyEmitter();
-for(let i = 0; i < 11; i++) {
-  myEmitter.on('event', _ => console.log(i));
-}
-
-myEmitter.emit('event');
 
 var paper = [
   "<:rpsrock:495279201855864832>** Rock! Win! **<:rpsrock:495279201855864832>",
@@ -86,7 +76,7 @@ client.on("message", (message) => {
   const ID = message.author.id;
   if (message.content.startsWith("/balance")) {
   const money = require('./money.json');
-  message.channel.send("**You have: " + " UsefulCoins!**");
+  message.channel.send("**You have: " + money[ID] + " UsefulCoins! <:UsefulCoin:645230163084181505>**");
   }
 });
 
@@ -106,7 +96,7 @@ client.on("message", (message) => {
   const money = require('./money.json');
   money[ID] += 50;
   fs.writeFileSync('./money.json', JSON.stringify(money));
-  message.channel.send("**Added 50 UsefulCoins to your account!**");
+  message.channel.send("**Added 50 UsefulCoins to your account! <:UsefulCoin:645230163084181505>**");
   }
 });
 
