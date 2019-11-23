@@ -113,10 +113,11 @@ client.on('message', message => {
            .setDescription('Need help?')
            .addField('**Basic commands**', '-')
            .addField('**/chat + [message]**:', 'Sends a message to the UsefulChat, a global chat.')
+           .addField('**/poll + [message]**:', 'Creates a poll.')
            .addBlankField()
            .addField('**Money commands**', '-')
-           .addField('**/create**:', 'Creates your own money account.')
-           .addField('**/balance**:', 'Checks your money account (use /create before using it for the first time).')
+           .addField('**/create**:', 'Creates your own money account. [Buggy]')
+           .addField('**/balance**:', 'Checks your money account (use /create before using it for the first time). [Buggy]')
            .addBlankField()
 	   .setFooter('UsefulBot', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
      message.delete().catch(O_o=>{});
