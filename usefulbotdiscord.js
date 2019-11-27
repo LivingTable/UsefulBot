@@ -100,6 +100,15 @@ client.on("message", (message) => {
   }
 });
 
+
+client.on("message", (message) => {
+  if (message.content.startsWith("UsefulAnnonce1")) {
+  message.delete().catch(O_o=>{});
+  file : "capture-surveillance-27-11-2019.png"
+  message.channel.send("**||@everyone|| Je les vois, ils sont en train de construire un arme redoutable. Des alliés seront bientôt là pour les stopper.**");
+  }
+});
+
 //Useless things
 
 client.on('message', message => {
