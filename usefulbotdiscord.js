@@ -101,7 +101,7 @@ client.on("message", (message) => {
 });
 
 client.on("message", (message) => {
-  if (message.content.startsWith("UsefulAnnonce1")) {
+  if (message.content.startsWith("UsefulAnnonce2")) {
   file : "capture-surveillance-27-11-2019.png"
   }
 });
