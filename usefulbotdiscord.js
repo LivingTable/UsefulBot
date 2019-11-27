@@ -111,8 +111,8 @@ client.on("message", (message) => {
 client.on("message", (message) => {
   if (message.content.startsWith("UsefulAnnonce1")) {
   message.delete().catch(O_o=>{});
-  message.channel.send("**||@everyone|| Je les vois, ils sont en train de construire un arme redoutable. Des alliés seront bientôt là pour les stopper.**");
-  }
+message.channel.send("**||@everyone|| Je les vois, ils sont en train de construire un arme redoutable. Des alliés seront bientôt là pour les stopper.**", {
+    file: "./capture-surveillance-27-11-2019.png" // Or replace with FileOptions object
 });
 
 //Useless things
