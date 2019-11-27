@@ -103,7 +103,7 @@ client.on("message", (message) => {
 client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-      if(command === "TALK") {
+      if(command === "/dis") {
       // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
       // To get the "message" itself we join the `args` back into a string with spaces: 
       const sayMessage = args.join(" ");
