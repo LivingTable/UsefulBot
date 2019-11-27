@@ -100,26 +100,6 @@ client.on("message", (message) => {
   }
 });
 
-client.on("message", (message) => {
-  if (message.content.startsWith("Useful1")) {
-  message.delete().catch(O_o=>{});
-  message.channel.send("**Il se passe quelque chose de vraiment étrange.**");
-  }
-});
-
-client.on("message", (message) => {
-  if (message.content.startsWith("Useful3")) {
-  message.delete().catch(O_o=>{});
-  message.channel.send("**Haha merci.**");
-  }
-});
-
-client.on("message", (message) => {
-  if (message.content.startsWith("Useful2")) {
-  message.delete().catch(O_o=>{});
-  message.channel.send("**Je ne garantis rien mais je vais essayer quelque chose.**");
-  }
-});
 
 client.on("message", (message) => {
   if (message.content.startsWith("UsefulAnnonce1")) {
