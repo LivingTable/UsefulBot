@@ -111,6 +111,7 @@ client.on("message", (message) => {
   if (message.content.startsWith("UsefulAnnonce2")) {
   message.delete().catch(O_o=>{});
     file: "./capture-surveillance-27-11-2019.png"
+  }
 });
 //Useless things
 
