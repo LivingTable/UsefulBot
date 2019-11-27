@@ -134,8 +134,8 @@ client.on("message", (message) => {
 
 client.on('message', message => {
   if (message.content.startsWith("/help")) {
+  const command = args.shift().toLowerCase();
   const args = message.content.slice(prefix.length).trim().split(/ +/g); 
-  const command = args.shift().toLowerCase();     
   const sayMessage = args.join(" ");
   const usefulEmbed = new Discord.RichEmbed()
  	   .setColor('#484848')
