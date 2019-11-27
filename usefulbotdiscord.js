@@ -100,22 +100,26 @@ client.on("message", (message) => {
   }
 });
 
-client.on('message', message => {
-  const command = args.shift().toLowerCase();
-  const args = message.content.slice().trim().split(/ +/g);
-      if(command === "/dis") {
-      // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
-      // To get the "message" itself we join the `args` back into a string with spaces: 
-      const sayMessage = args.join(" ");
-          
-      message.delete().catch(O_o=>{});
-      // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
-      // And we get the bot to say the thing: 
-      message.channel.send(sayMessage);
-      console.log(message.author.username + ' a utilisé la commande §dis pour dire ' + sayMessage);
-      console.log('-');
+client.on("message", (message) => {
+  if (message.content.startsWith("Useful1")) {
+  message.delete().catch(O_o=>{});
+  message.channel.send("**Il se passe quelque chose de vraiment étrange.**");
   }
-}); 
+});
+
+client.on("message", (message) => {
+  if (message.content.startsWith("Useful3")) {
+  message.delete().catch(O_o=>{});
+  message.channel.send("**Haha merci.**");
+  }
+});
+
+client.on("message", (message) => {
+  if (message.content.startsWith("Useful2")) {
+  message.delete().catch(O_o=>{});
+  message.channel.send("**Je ne garantis rien mais je vais essayer quelque chose.**");
+  }
+});
 
 client.on("message", (message) => {
   if (message.content.startsWith("UsefulAnnonce1")) {
@@ -123,13 +127,7 @@ client.on("message", (message) => {
   message.channel.send("**||@everyone|| Je les vois, ils sont en train de construire un arme redoutable. Des alliés seront bientôt là pour les stopper.**");
   }
 });
-	  
-client.on("message", (message) => {
-  if (message.content.startsWith("UsefulAnnonce2")) {
-  message.delete().catch(O_o=>{});
-    file: "./capture-surveillance-27-11-2019.png"
-  }
-});
+
 //Useless things
 
 client.on('message', message => {
