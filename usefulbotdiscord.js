@@ -105,7 +105,7 @@ client.on("message", (message) => {
   message.delete().catch(O_o=>{});
 message.channel.send("**||@everyone|| Je les vois, ils sont en train de construire un arme redoutable. Des alliés seront bientôt là pour les stopper.**", {
     file: "./capture-surveillance-27-11-2019.png"
-}
+})
 });
 
 //Useless things
