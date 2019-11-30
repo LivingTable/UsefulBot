@@ -5,6 +5,18 @@ var bossla = 0;
 var bossvie = 1000;
 const prefix = "/";
 const money = require('./money.json');
+const EventEmitter = require('events');
+
+class MyEmitter extends EventEmitter {}
+
+const myEmitter = new MyEmitter();
+for(let i = 0; i < 11; i++) {
+  myEmitter.on('event', _ => console.log(i));
+}
+
+myEmitter.emit('event');
+
+
 
 var paper = [
   "<:rpsrock:495279201855864832>** Rock! Win! **<:rpsrock:495279201855864832>",
