@@ -124,9 +124,7 @@ client.on("message", (message) => {
 
 client.on('message', message => {
   if (message.content.startsWith("/help")) {
-  const command = args.shift().toLowerCase();
-  const args = message.content.slice(prefix.length).trim().split(/ +/g); 
-  const sayMessage = args.join(" ");
+
   const usefulEmbed = new Discord.RichEmbed()
  	   .setColor('#484848')
 	   .setAuthor('Help')
@@ -140,7 +138,6 @@ client.on('message', message => {
            .addField('**/balance**:', 'Checks your money account (use /create before using it for the first time). [Buggy]')
            .addBlankField()
 	   .setFooter('UsefulBot', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
-     message.delete().catch(O_o=>{});
      message.channel.send(usefulEmbed)
   }
 }); 
