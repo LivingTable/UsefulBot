@@ -132,8 +132,7 @@ client.on('message', message => {
                 reason: `Banned using UsefulBot's banning command.`,
                 })
                 }	
-	};
-	};
+	}};
 });
 
 
