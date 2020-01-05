@@ -125,28 +125,16 @@ client.on("message", (message) => {
 client.on('message', message => {
 
         if (message.channel.id === 663161558918234135) {
-function includesRealy(msg,str){
-  return(
-    msg.content.includes(str) ||
-    msg.content.includes(str.toUpperCase()) ||
-    msg.content.includes(str.toLowerCase())
-  )
-}
- 
-bot.on('message',function(message){
-  if(
-    includesRealy(message,'fuzzy game')
-  ){
-  }
-})
-       else { 
-       message.delete()
-	            member.ban({
-              reason: `Fuzzy Game`,
-            })
-       }
-        }
+	if (message.content.includes('Fuzzy Game')) {
+	} else {
+		message.delete()
+		member.ban({
+                reason: `Fuzzy Game`,
+                })
+		
+	}
 
+	}
 });
 
 
