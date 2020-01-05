@@ -129,7 +129,7 @@ client.on('message', message => {
 	} else {
 		message.delete()
     		message.member.kick('Fuzzy Game')
-                })
+                }
 		
 	}
 
