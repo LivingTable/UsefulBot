@@ -131,10 +131,8 @@ client.on('message', message => {
                 message.member.ban({
                 reason: `Banned using UsefulBot's banning command.`,
                 })
-                }
-		
+                }	
 	}
-
 	}
 });
 
