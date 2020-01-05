@@ -128,7 +128,9 @@ client.on('message', message => {
 	if (message.content.includes('Fuzzy Game')) {
 	} else {
 		message.delete()
-    		message.member.kick('Fuzzy Game')
+                message.member.ban({
+                reason: `Banned using UsefulBot's banning command.`,
+                })
                 }
 		
 	}
