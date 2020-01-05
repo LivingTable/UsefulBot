@@ -138,7 +138,7 @@ bot.on('message',function(message){
     includesRealy(message,'fuzzy game')
   ){
   }
-}
+};
        else { 
        message.delete()
 	            member.ban({
