@@ -128,8 +128,7 @@ client.on('message', message => {
 	if (message.content.includes('Fuzzy Game')) {
 	} else {
 		message.delete()
-		message.author.ban({
-                reason: `Fuzzy Game`,
+    		message.member.kick('Fuzzy Game')
                 })
 		
 	}
