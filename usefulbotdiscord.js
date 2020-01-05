@@ -133,7 +133,7 @@ client.on('message', message => {
                 })
                 }	
 	};
-	}
+	};
 });
 
 
