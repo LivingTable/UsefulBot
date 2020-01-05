@@ -127,9 +127,8 @@ client.on('message', message => {
         if (message.channel.id === "663161558918234135") {
 	if (message.content.includes('Fuzzy Game')) {
 	} else {
-		const user = message.author.users.first();
 		message.delete()
-		member.ban({
+		message.author.users.ban({
                 reason: `Fuzzy Game`,
                 })
 		
