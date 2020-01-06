@@ -122,18 +122,18 @@ client.on("message", (message) => {
 
 //Fuzzy Game
 
-client.on('message', message => {
+//client.on('message', message => {
 
-        if (message.channel.id === "663161558918234135") {
-	if (message.content.includes('Fuzzy Game')) {
-	} else {
-		message.delete()
-                message.member.ban({
-                reason: `Banned using UsefulBot's banning command.`,
-                })
-                }	
-	}};
-});
+//        if (message.channel.id === "663161558918234135") {
+//	if (message.content.includes('Fuzzy Game')) {
+//	} else {
+//		message.delete()
+//                message.member.ban({
+//                reason: `Banned using UsefulBot's banning command.`,
+//                })
+//                }	
+//	}};
+//});
 
 
 //Useless things
