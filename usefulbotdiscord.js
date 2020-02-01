@@ -24,7 +24,8 @@ client.on('message', message => {
     msg.content.includes(str.toLowerCase())
   )
 }
-  var args = "/wiki"
+
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.toLowerCase();
       if(command === "/wiki") {
       if(message.author.bot) return;
@@ -54,6 +55,13 @@ client.on('message', message => {
       var removespaces = removecommand.replace(spaces, "+");
     	message.channel.send("https://www.youtube.com/results?search_query=" + removespaces);
   	}
+});
+
+
+client.on("message", (message) => {
+  if (message.content.startsWith("/kiomps1)) {
+  message.channel.send("**KIOM PS1**\n<a:kiomps1:664185071548366898>\n**KIOM PS1**");
+  }
 });
 
 var paper = [
