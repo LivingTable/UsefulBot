@@ -50,7 +50,7 @@ client.on('message', message => {
       if(message.author.bot) return;
       var messagecontent = message.content;
       var spaces = / /g;
-      var removecommand = messagecontent.replace("/wiki ", "");
+      var removecommand = messagecontent.replace("/youtube ", "");
       var removespaces = removecommand.replace(spaces, "+");
     	message.channel.send("https://www.youtube.com/results?search_query=" + removespaces);
   	}
