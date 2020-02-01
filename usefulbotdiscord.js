@@ -59,7 +59,7 @@ client.on('message', message => {
 
 
 client.on("message", (message) => {
-  if (message.content.startsWith("/kiomps1)) {
+  if (message.content.startsWith("/kiomps1")) {
   message.channel.send("**KIOM PS1**\n<a:kiomps1:664185071548366898>\n**KIOM PS1**");
   }
 });
