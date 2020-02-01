@@ -25,8 +25,8 @@ client.on('message', message => {
   )
 }
 
-  const arg = message.content.slice(prefix.length).trim().split(/ +/g);
-  const command = arg.toLowerCase();
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
       if(command === "/wiki") {
       if(message.author.bot) return;
       var messagecontent = message.content;
