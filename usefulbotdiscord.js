@@ -24,12 +24,14 @@ client.on('message', message => {
     msg.content.includes(str.toLowerCase())
   )
 }
-    if (message.content.startsWith("/wiki ")) {
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+      if(command === "wiki") {
       if(message.author.bot) return;
       var messagecontent = message.content;
       var spaces = / /g;
       var removespaces = messagecontent.replace(spaces, "_");
-      var removecommand = removespaces.replace("/wiki ", "");
+      var removecommand = removespaces.replace(command, "");
     	message.channel.send("https://fr.wikipedia.org/wiki/" + removecommand);
   	}
 });
@@ -125,14 +127,6 @@ client.on("message", (message) => {
   money[ID] += 50;
   fs.writeFileSync('./money.json', JSON.stringify(money));
   message.channel.send("**Added 50 UsefulCoins to your account! <:UsefulCoin:645230163084181505>**");
-  }
-});
-
-
-client.on("message", (message) => {
-  if (message.content.startsWith("UsefulAnnonce1")) {
-  message.delete().catch(O_o=>{});
-  message.channel.send("**||@everyone|| Je les vois, ils sont en train de construire un arme redoutable. Des alliés seront bientôt là pour les stopper.**");
   }
 });
 
