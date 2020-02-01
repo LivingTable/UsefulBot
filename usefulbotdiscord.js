@@ -29,9 +29,8 @@ client.on('message', message => {
       if(command === "wiki") {
       if(message.author.bot) return;
       var messagecontent = message.content;
-      var spaces = / /g;
       var removecommand = messagecontent.replace("/wiki ", "");
-      var removespaces = removecommand.replace(spaces, "_");
+      var removespaces = removecommand.replace(" ", "_");
     	message.channel.send("https://fr.wikipedia.org/wiki/" + removecommand);
   	}
 });
