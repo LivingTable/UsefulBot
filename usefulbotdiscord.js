@@ -178,6 +178,8 @@ client.on('message', message => {
            .addField('**Basic commands**', '-')
            .addField('**/chat + [message]**:', 'Sends a message to the UsefulChat, a global chat.')
            .addField('**/poll + [message]**:', 'Creates a poll.')
+           .addField('**/wiki + [message]**:', 'Searches on Wikipédia.')
+           .addField('**/youtube + [message]**:', 'Searches on YouTube.')
            .addBlankField()
            .addField('**Money commands**', '-')
            .addField('**/create**:', 'Creates your own money account. [Buggy]')
