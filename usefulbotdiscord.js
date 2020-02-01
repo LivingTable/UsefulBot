@@ -31,7 +31,7 @@ client.on('message', message => {
       var messagecontent = message.content;
       var removecommand = messagecontent.replace("/wiki ", "");
       var removespaces = removecommand.replace(" ", "_");
-    	message.channel.send("https://fr.wikipedia.org/wiki/" + removecommand);
+    	message.channel.send("https://fr.wikipedia.org/wiki/" + removespaces);
   	}
 });
 
