@@ -16,7 +16,23 @@ for(let i = 0; i < 11; i++) {
 
 myEmitter.emit('event');
 
-
+client.on('message', message => {
+	function includesRealy(msg,str){
+  return(
+    msg.content.includes(str) ||
+    msg.content.includes(str.toUpperCase()) ||
+    msg.content.includes(str.toLowerCase())
+  )
+}
+    if (message.content.startsWith("/wiki ")) {
+      if(message.author.bot) return;
+      var messagecontent = message.content;
+      var spaces = / /g;
+      var removespaces = messagecontent.replace(spaces, "_");
+      var removecommand = removespaces.replace("/wiki ", "");
+    	message.channel.send("https://fr.wikipedia.org/wiki/" + removecommand);
+  	}
+});
 
 var paper = [
   "<:rpsrock:495279201855864832>** Rock! Win! **<:rpsrock:495279201855864832>",
