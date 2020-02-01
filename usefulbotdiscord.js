@@ -36,6 +36,26 @@ client.on('message', message => {
   	}
 });
 
+client.on('message', message => {
+	function includesRealy(msg,str){
+  return(
+    msg.content.includes(str) ||
+    msg.content.includes(str.toUpperCase()) ||
+    msg.content.includes(str.toLowerCase())
+  )
+}
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+      if(command === "youtube") {
+      if(message.author.bot) return;
+      var messagecontent = message.content;
+      var spaces = / /g;
+      var removecommand = messagecontent.replace("/wiki ", "");
+      var removespaces = removecommand.replace(spaces, "+");
+    	message.channel.send("https://www.youtube.com/results?search_query=" + removespaces);
+  	}
+});
+
 var paper = [
   "<:rpsrock:495279201855864832>** Rock! Win! **<:rpsrock:495279201855864832>",
   "<:rpsscissors:495279191294476288>** Scissors! Lose... **<:rpsscissors:495279191294476288>",
