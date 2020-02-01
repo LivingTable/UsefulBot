@@ -24,9 +24,9 @@ client.on('message', message => {
     msg.content.includes(str.toLowerCase())
   )
 }
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-      if(command === "wiki") {
+  var args = "/wiki"
+  const command = args.toLowerCase();
+      if(command === "/wiki") {
       if(message.author.bot) return;
       var messagecontent = message.content;
       var spaces = / /g;
