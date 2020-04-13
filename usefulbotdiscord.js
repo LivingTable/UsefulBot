@@ -216,8 +216,8 @@ client.on('message', message => {
       message.delete().catch(O_o=>{});
       //Suppression
       //Liste des salons ciblés
-      message.channels.get("id", "699313180937289868").send(usefulEmbed);
-      message.channels.get("id", "609197786851704832").send(usefulEmbed);
+      client.channels.get("id", "699313180937289868").send(usefulEmbed);
+      client.channels.get("id", "609197786851704832").send(usefulEmbed);
   }
 }); 
 
