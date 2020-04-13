@@ -217,7 +217,7 @@ client.on('message', message => {
       //Suppression
       //Liste des salons ciblés
       client.channels.get('609197786851704832').send(usefulEmbed);
-      client.channels.get('609201802306650112').send(usefulEmbed);
+      client.channels.get('699313180937289868').send(usefulEmbed);
   }
 }); 
 
