@@ -216,8 +216,7 @@ client.on('message', message => {
       message.delete().catch(O_o=>{});
       //Suppression
       //Liste des salons ciblés
-      client.channels.get('609197786851704832').send(usefulEmbed);
-      client.channels.get('609201802306650112').send(usefulEmbed);
+      client.channels.find("name","usefulchat").send(usefulEmbed)
   }
 }); 
 
