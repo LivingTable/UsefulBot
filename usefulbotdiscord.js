@@ -165,7 +165,7 @@ client.on("message", (message) => {
 //        if (message.channel.id === "663161558918234135") {
 //	if (message.content.includes('Fuzzy Game')) {
 //	} else {
-//		message.delete()
+//		  message.delete()
 //                message.member.ban({
 //                reason: `Banned using UsefulBot's banning command.`,
 //                })
@@ -203,7 +203,6 @@ client.on('message', message => {
 client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  const chan = <guild>.channels.find(channel => channel.name === "usefulchat")
       if(command === "chat") {
       //Prend le texte saisi
       //Je sais pas comment expliquer mdr mais ça merde si tu le mets pas
@@ -217,7 +216,7 @@ client.on('message', message => {
       message.delete().catch(O_o=>{});
       //Suppression
       //Liste des salons ciblés
-      message.chan.send(usefulEmbed)
+      message.member.channels.find("name", "usefulchat").send(usefulEmbed);
   }
 }); 
 
