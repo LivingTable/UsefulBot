@@ -207,9 +207,9 @@ client.on('message', message => {
       //Prend le texte saisi
       //Je sais pas comment expliquer mdr mais ça merde si tu le mets pas
       const sayMessage = args.join(" ");
-      var neutral = sayMessage(":neutral_face:", "<:normal:699312645546836047>");
-      var neutral2 = neutral.replace(":|", "<:normal:699312645546836047>");
-      var mock = neutral2.replace(">:D", "<:mock:699312844583338116>");
+      const neutral = sayMessage(":neutral_face:", "<:normal:699312645546836047>");
+      const neutral2 = neutral.replace(":|", "<:normal:699312645546836047>");
+      const mock = neutral2.replace(">:D", "<:mock:699312844583338116>");
       const Author = message.author.username
       const usefulEmbed = new Discord.RichEmbed()
 	.setColor('#484848')
