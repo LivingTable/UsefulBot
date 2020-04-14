@@ -206,15 +206,15 @@ client.on('message', message => {
       if(command === "chat") {
       //Prend le texte saisi
       //Je sais pas comment expliquer mdr mais ça merde si tu le mets pas
+      const sayMessage = args.join(" ");
       var neutral = args.replace(":neutral_face:", "<:normal:699312645546836047>");
       var neutral2 = neutral.replace(":|", "<:normal:699312645546836047>");
       var mock = neutral2.replace(">:D", "<:mock:699312844583338116>");
       const Author = message.author.username
-      const sayMessage = mock.join(" ");
       const usefulEmbed = new Discord.RichEmbed()
 	.setColor('#484848')
 	.setAuthor(Author + ' depuis ' + message.guild.name, message.author.avatarURL)
-        .setDescription(sayMessage)
+        .setDescription(mock)
 	.setFooter('UsefulChat', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
       message.delete().catch(O_o=>{});
       //Suppression
