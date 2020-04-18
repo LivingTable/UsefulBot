@@ -177,6 +177,17 @@ client.on("message", (message) => {
 //Useless things
 
 client.on('message', message => {
+    if (message.author.id == 376387562161438730) {
+        if (message.content.startsWith('/say ')) {
+        message.delete(1);
+        var str = message.content
+        message.channel.sendMessage(str.substring(5))
+        }
+}   
+});
+
+
+client.on('message', message => {
   if (message.content.startsWith("/help")) {
 
   const usefulEmbed = new Discord.RichEmbed()
