@@ -263,6 +263,31 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+  if (!message.guild) return;
+    if (message.author.id == 376387562161438730) {
+      if (message.content.startsWith('/kick ')) {
+        const user = message.mentions.users.first();
+        if (user) {
+          const member = message.guild.member(user);
+          if (member) {
+            member.kick({
+              reason: `Kicked using UsefulBot's kicking command.`,
+            }).then(() => {
+              message.reply(`**${user.tag} is kicked using UsefulBot's kicking command.**`);
+            }).catch(err => {
+              message.reply(`**Can't kick this guy.**`);
+            });
+          } else {
+            message.reply('**What?**');
+          }
+          } else {
+            message.reply('**Who do you want to kick?**');
+      }
+    }
+  }      
+});
+
+client.on('message', message => {
   if (message.content.startsWith("/poll ")) {
   const args = message.content.slice(prefix.length).trim().split(/ +/g); 
   const command = args.shift().toLowerCase();     
