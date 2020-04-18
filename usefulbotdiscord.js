@@ -181,7 +181,7 @@ client.on('message', message => {
         if (message.content.startsWith('/say ')) {
         message.delete(1);
         var str = message.content
-        message.channel.sendMessage(str.substring(5))
+        message.channel.send(str.substring(5))
         }
 }   
 });
