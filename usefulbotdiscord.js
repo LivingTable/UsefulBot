@@ -6,6 +6,7 @@ var bossvie = 1000;
 const prefix = "/";
 const money = require('./money.json');
 const EventEmitter = require('events');
+import { XMLHttpRequest } from "xmlhttprequest";
 
 class MyEmitter extends EventEmitter {}
 
@@ -186,6 +187,31 @@ client.on('message', message => {
 }   
 });
 
+
+client.on('message', message => {
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+      if(command === "wolfy") {
+      //Prend le texte saisi
+      //Je sais pas comment expliquer mdr mais ça merde si tu le mets pas
+      const usefulEmbed = new Discord.RichEmbed()
+	.setAuthor(message.author.username, message.author.avatarURL)
+	.setTitle("Wolfy stats")
+	.setDescription(args + "'s stats")
+	.setColor("#484848")
+	.setThumbnail("https://cdn.discordapp.com/emojis/658462532260069395.png?v=1")
+	.addField("Total Wins", parsedRequest.mainStats)
+	.addField("Favorite role", parsedRequest.favoriteRoleGroup)
+	.addField("Winrate with favorite role", parsedRequest.victoryRoleGroup)
+	.setFooter('UsefulChat', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
+      //Suppression
+      //Liste des salons ciblés
+      client.channels.get('609197786851704832').send(usefulEmbed);
+      message.channel.send(usefulEmbed);
+	http.open("GET", "https://wolfy.fr/leaderboard/" + args, true);
+        	xhttp.send();
+  }
+}); 
 
 client.on('message', message => {
   if (message.content.startsWith("/help")) {
