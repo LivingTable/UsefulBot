@@ -11,12 +11,7 @@
   "dependencies": {
     "xmlhttprequest": "^1.8.0",
     "xmlhttprequest-ts": "^1.0.1",
-    "yt-search": "^1.1.2",
-    "ytdl-core": "^2.0.1"
-    "ffmpeg": "0.0.4",
     "canvas": "^2.6.1",
-    "ffmpeg-binaries": "^4.0.0",
-    "fs": "0.0.1-security",
     "discord.js": "^11.3.2",
     "github": "^14.0.0",
     "npm": "^6.2.0",
