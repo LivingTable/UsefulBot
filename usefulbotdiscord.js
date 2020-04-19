@@ -6,7 +6,7 @@ var bossvie = 1000;
 const prefix = "/";
 const money = require('./money.json');
 const EventEmitter = require('events');
-const XMLHttpRequest = require ('xmlhttprequest');
+const XMLHttpRequest = require('xmlhttprequest');
 
 class MyEmitter extends EventEmitter {}
 
