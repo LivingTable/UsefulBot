@@ -200,9 +200,9 @@ client.on('message', message => {
 	.setDescription(args + "'s stats")
 	.setColor("#484848")
 	.setThumbnail("https://cdn.discordapp.com/emojis/658462532260069395.png?v=1")
-	.addField("Total Wins", parsedRequest.mainStats)
-	.addField("Favorite role", parsedRequest.favoriteRoleGroup)
-	.addField("Winrate with favorite role", parsedRequest.victoryRoleGroup)
+	.addField("Total Wins", mainStats)
+	.addField("Favorite role", favoriteRoleGroup)
+	.addField("Winrate with favorite role", victoryRoleGroup)
 	.setFooter('UsefulChat', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
       //Suppression
       //Liste des salons ciblés
