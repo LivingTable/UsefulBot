@@ -10,6 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.3.2",
+    "xmlhttprequest": "^1.8.0",
+    "xmlhttprequest-ts": "^1.0.1",
+    "yt-search": "^1.1.2",
+    "ytdl-core": "^2.0.1"
+    "googleapis": "^39.2.0",
+    "ffmpeg": "0.0.4",
+    "canvas": "^2.6.1",
     "ffmpeg-binaries": "^4.0.0",
     "fs": "0.0.1-security",
     "github": "^14.0.0",
