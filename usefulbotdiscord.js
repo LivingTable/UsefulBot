@@ -215,13 +215,17 @@ client.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
       if(command === "chat") {
+	          if (message.author.id == 376387562161438730) {
+			  var badge = "<:Table:647742374641926144>"
+			  } else {
+				  badge = ""
       //Prend le texte saisi
       //Je sais pas comment expliquer mdr mais ça merde si tu le mets pas
       var sayMessage = args.join(" ");
       var neutral = sayMessage.replace(":neutral_face:", "<:normal:699312645546836047>");
       var neutral2 = neutral.replace(":|", "<:normal:699312645546836047>");
       var mock = neutral2.replace(">:D", "<:mock:699312844583338116>");
-      const Author = message.author.username
+      const Author = message.author.username + badge
       const usefulEmbed = new Discord.RichEmbed()
 	.setColor('#484848')
 	.setAuthor(Author + ' depuis ' + message.guild.name, message.author.avatarURL)
@@ -261,6 +265,9 @@ client.on('message', message => {
     }
   }      
 });
+
+
+//
 
 client.on('message', message => {
   if (!message.guild) return;
