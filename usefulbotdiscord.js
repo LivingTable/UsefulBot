@@ -218,7 +218,8 @@ client.on('message', message => {
 	          if (message.author.id == 376387562161438730) {
 			  var badge = "<:Table:647742374641926144>"
 			  } else {
-				  badge = ""
+				var badge = ""
+			  }
       //Prend le texte saisi
       //Je sais pas comment expliquer mdr mais ça merde si tu le mets pas
       var sayMessage = args.join(" ");
