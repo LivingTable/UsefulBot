@@ -7,6 +7,7 @@ const prefix = "/";
 const money = require('./money.json');
 const EventEmitter = require('events');
 const XMLHttpRequest = require('xmlhttprequest');
+const canvaslib = require('canvas');
 
 class MyEmitter extends EventEmitter {}
 
@@ -294,6 +295,26 @@ client.on('message', message => {
     }
   }      
 });
+
+    const canvas = canvaslib.createCanvas(250, 250);
+    const ctx = canvas.getContext("2d");
+    const user = args[0] ? message.mentions.users.first() : message.member.user;
+
+    const background = await canvaslib.loadImage("./frame/frame.png");
+    ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+
+    ctx.beginPath(); // rounded profile pic
+    ctx.arc(120, 120, 60, 0, Math.PI * 2, true);
+    ctx.closePath();
+    ctx.clip();
+
+    const avatar = await canvaslib.loadImage(user.displayAvatarURL);
+    ctx.drawImage(avatar, 120, 120, 0, 0);
+
+    const attachment = new Discord.Attachment(canvas.toBuffer(), 'frame.png');
+
+    message.channel.send(attachment);
+}
 
 client.on('message', message => {
   if (message.content.startsWith("/poll ")) {
