@@ -295,7 +295,8 @@ client.on('message', message => {
     }
   }      
 });
-
+client.on('message', message => {
+  if (message.content.startsWith("/help")) {
     const canvas = canvaslib.createCanvas(250, 250);
     const ctx = canvas.getContext("2d");
     const user = args[0] ? message.mentions.users.first() : message.member.user;
@@ -315,7 +316,8 @@ client.on('message', message => {
 
     message.channel.send(attachment);
 }
-
+});
+	
 client.on('message', message => {
   if (message.content.startsWith("/poll ")) {
   const args = message.content.slice(prefix.length).trim().split(/ +/g); 
