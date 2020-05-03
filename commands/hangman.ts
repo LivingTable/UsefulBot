@@ -1,18 +1,9 @@
 import * as Discord from "discord.js";
 import * as fs from "fs";
 
-// Fun command
-
-/**
- * Re-creating the hangman game but it's in Discord
- * @param {Discord.Client} Client the client
- * @param {Discord.Message} Message the message that contains the command name
- * @param {string[]} args the command args
- * @param {any} options some options
- */
 export async function run(Client: Discord.Client, message: Discord.Message, args: string[], ops: any) {
     const wordsToFind: string[] = [];
-    let data = fs.readFileSync("assets/words.txt", "utf-8");
+    let data = fs.readFileSync("words.txt", "utf-8");
 
     for (let word of data.split("\n")) {
         wordsToFind.push(word);
