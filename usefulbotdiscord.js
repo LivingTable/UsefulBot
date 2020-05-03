@@ -321,7 +321,7 @@ if (message.author.id == 376387562161438730) {
 if (message.content.includes('/nickname')) {
 	let cmember = message.mentions.members.first();
     if (!message.guild.me.hasPermission('MANAGE_NICKNAMES')) return message.channel.send('I don\'t have permission to change your nickname!');
-    message.cmember.setNickname(message.content.replace('/nick <@${cmember.id}>', ''));
+    cmember.user.setNickname(message.content.replace('/nick <@${cmember.id}>', ''));
         }
   }
 });
