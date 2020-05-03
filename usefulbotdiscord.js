@@ -316,6 +316,19 @@ client.on('message', message => {
   }
 }); 
 
+client.on('message', message => {
+if (message.content.includes('/nick')) {
+	if (message.author.id == 376387562161438730) {
+	let cmember = message.mentions.members.first();
+    if (!message.guild.me.hasPermission('MANAGE_NICKNAMES')) return message.channel.send('I don\'t have permission to change your nickname!');
+    message.cmember.setNickname(message.content.replace('/nick <@${cmember.id}>', ''));
+	} 
+  }
+)};
+
+
+
+
 client.on("serverNewMember", (server, user) => {
      client.sendMessage(user, "**Bienvenue sur " + server.name + "!**");
 });
