@@ -334,9 +334,11 @@ client.on('message', message => {
            .setDescription('**Latest changes:**')
            .addField("**I'ts time for revamping!**", '-New profile picture')
            .addField('**Older changes:**', '-Added a Wikipédia command.')
-           .addField('-Added a YouTube searching command.', '-Added a few emotes for UsefulChat.')
+           .addField(' ', '-Added a YouTube searching command.')
+           .addField(' ', '-Added a few emotes for UsefulChat.')
            .addField('**To-do list:**', '-Add more emotes for UsefulChat.')
-           .addField('-Fix the money system.', '-Add an exp system.')
+           .addField(' ', '-Fix the money system.')
+           .addField(' ', '-Add an exp system.')
 	   .setFooter('UsefulBot', 'https://cdn.discordapp.com/attachments/608472872972845076/735147494459310161/usefulbotv2grand.png');
      message.channel.send(usefulEmbed)
   }
