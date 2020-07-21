@@ -200,9 +200,10 @@ client.on('message', message => {
            .addField('**/wiki + [message]**:', 'Searches on Wikipédia.')
            .addField('**/youtube + [message]**:', 'Searches on YouTube.')
            .addBlankField()
-           .addField('**Money commands**', '-')
-           .addField('**/create**:', 'Creates your own money account. [Buggy]')
-           .addField('**/balance**:', 'Checks your money account (use /create before using it for the first time). [Buggy]')
+           .addField('**Bot information commands**', '-')
+           .addField('**/changelog**:', "Check the bot's changelog.")
+           .addBlankField()
+           .addField('**Money commands**', '[Coming soon!]')
            .addBlankField()
 	   .setFooter('UsefulBot', 'https://cdn.discordapp.com/attachments/608472872972845076/735147494459310161/usefulbotv2grand.png');
      message.channel.send(usefulEmbed)
