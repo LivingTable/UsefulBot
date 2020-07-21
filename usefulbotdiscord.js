@@ -3,7 +3,7 @@ const fs = require('fs');
 const client = new Discord.Client();
 var bossla = 0;
 var bossvie = 1000;
-const prefix = "/";
+const prefix = ;
 const money = require('./money.json');
 const EventEmitter = require('events');
 const XMLHttpRequest = require('xmlhttprequest');
@@ -28,7 +28,7 @@ client.on('message', message => {
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-      if(command === "wiki") {
+      if(command === "/wiki") {
       if(message.author.bot) return;
       var messagecontent = message.content;
       var spaces = / /g;
@@ -204,7 +204,7 @@ client.on('message', message => {
            .addField('**/create**:', 'Creates your own money account. [Buggy]')
            .addField('**/balance**:', 'Checks your money account (use /create before using it for the first time). [Buggy]')
            .addBlankField()
-	   .setFooter('UsefulBot', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
+	   .setFooter('UsefulBot', 'https://cdn.discordapp.com/attachments/608472872972845076/735147494459310161/usefulbotv2grand.png');
      message.channel.send(usefulEmbed)
   }
 }); 
@@ -216,7 +216,7 @@ client.on('message', message => {
   const command = args.shift().toLowerCase();
       if(command === "chat") {
 	          if (message.author.id == 376387562161438730) {
-			  var badge = "<:Table:647742374641926144>"
+			  var badge = " ⚜️"
 			  } else {
 				var badge = ""
 			  }
@@ -231,7 +231,7 @@ client.on('message', message => {
 	.setColor('#484848')
 	.setAuthor(Author + ' depuis ' + message.guild.name, message.author.avatarURL)
         .setDescription(mock)
-	.setFooter('UsefulChat', 'https://media.discordapp.net/attachments/608472872972845076/608472935702986775/ef1bf607332e504a9354aa16a79a055c.jpg');
+	.setFooter('UsefulChat', 'https://cdn.discordapp.com/attachments/608472872972845076/735147494459310161/usefulbotv2grand.png');
       message.delete().catch(O_o=>{});
       //Suppression
       //Liste des salons ciblés
